@@ -1,11 +1,14 @@
 .container {
   min-width: 650px;
   min-height: 450px;
+  max-width: 800px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.12);
   padding-top: 5px;
+  height: fit-content;
 }
 
 .header {
@@ -14,6 +17,14 @@
   overflow-x: auto;
   justify-content: space-around;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.header::-webkit-scrollbar {
+  height: 7px;
+  border-radius: 20px;
+}
+.header::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #808080;
 }
 .header .section {
   padding: 10px;
@@ -55,6 +66,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  align-items: center;
+}
+.chips .new {
+  color: #239ce2;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 .chip {
   display: flex;
@@ -63,6 +81,7 @@
   gap: 5px;
   padding: 4px 8px;
   background-color: #808080;
+  cursor: default;
 }
 .chip p {
   font-weight: 500;
@@ -75,6 +94,7 @@
   color: #fff;
   cursor: pointer;
 }
+
 .chips .active {
   background-color: #239ce2;
 }
